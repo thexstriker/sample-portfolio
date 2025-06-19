@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navigation">
+            <h1>Jenut Kranger</h1>
+            <ul>
+                <li><a href="#home">About Me</a></li>
+                <li><a href="#about">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="titlePage">
+        <div id="leftTitle">
+            <img src="profile name.png" alt="Boy" width="175">
+        </div>
+
+        <div id="rightTitle">
+            <h2>
+                Hi, I'm Jenut Kranger 🤝
+            </h2>
+            <p>
+                I am a student at the University of California, Berkeley, pursuing a degree in Computer Science. I have a passion for technology and a keen interest in software development. This portfolio showcases my skills, projects, and recommendations from peers and mentors.
+            </p>
+        </div>
+    </div>
+
+    <h1>Skills</h1>
+    <div class="skills">
+        <div id="HTML">
+            <p>HTML</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" width="40">
+            <p>5 years</p>
+        </div>
+        <div id="CSS">
+            <p>CSS</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" width="40">
+            <p>5 years</p>
+        </div>
+        <div id="JavaScript">
+            <p>JavaScript</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="40">
+            <p>5 years</p>
+        </div>
+        <div id="Java">
+            <p>Java</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="40">
+            <p>5 years</p>
+        </div>
+        <div id="Python">
+            <p>Python</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" width="40">
+            <p>5 years</p>
+        </div>
+        <div id="C">
+            <p>C</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" width="40">
+            <p>5 years</p>
+        </div>
+    </div>
+
+    <h1>Projects</h1>
+    <div>
+        <h2>Machine Learning Speech Analyzer</h2>
+        <ul>
+            <li>Created a machine learning algorithm that can analyze speech patterns and detect speech impediments.</li>
+        </ul>
+        <hr>
+        <h2>Reciept Scanner</h2>
+        <ul>
+            <li>Developed a mobile application that scans and organizes receipts, providing users with an easy way to track expenses.</li>
+        </ul>
+        <hr>
+        <h2>Outdoor Soccer Pickup Mobile Application</h2>
+        <ul>
+            <li>Designed a mobile application that connects soccer enthusiasts for outdoor pickup games, allowing users to find and join local matches.</li>
+        </ul>
+    </div>
+
+    <h1>Recommendations</h1>
+    <div class="recommendations">
+        <div id="recommenders">
+            <p>"Jenut is a dedicated and talented student. His work on the Machine Learning Speech Analyzer was impressive and showed his deep understanding of the subject."</p>
+            <h4>- Professor Smith, UC Berkeley</h4>
+        </div>
+        <div id="recommenders">
+            <p>"I had the pleasure of working with Jenut on the Reciept Scanner project. His coding skills and problem-solving abilities are exceptional."</p>
+            <h4>- Sarah Johnson, Classmate</h4>
+        </div>
+        <div id="recommenders">
+            <p>"Jenut's passion for technology is evident in his projects. The Outdoor Soccer Pickup app is a great example of his creativity and technical skills."</p>
+            <h4>- Mark Lee, Mentor</h4>
+        </div>
+    </div>
+
+    <div class="leave">
+        <h3>Leave a Recommendation</h3>
+        <form onsubmit="submitRecommendation(event)">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required style="width: 350px;"><br><br>
+            <label for="recommendation">Your Recommendation:</label><br>
+            <textarea id="recommendation" name="recommendation" rows="4" cols="40" required style="width: 350px;"></textarea><br><br>
+            <button type="submit" onclick="handleSubmit()">Submit</button>
+        </form>
+    </div>
+
+    <a href="#home" style="position: fixed; bottom: 30px; right: 30px; background: #222; border-radius: 50%; padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="32px" height="32px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </a>
+
+    <script>
+        function handleSubmit() {
+            const name = document.getElementById("name").value;
+            const recommendation = document.getElementById("recommendation").value;
+            if(name !== "" && recommendation !== "") {
+                alert("Thank you for your recommendation, " + name + "!");
+                document.getElementById("name").value = "";
+                document.getElementById("recommendation").value = "";
+                
+                const recommenderDiv = document.createElement("div");
+                recommenderDiv.id = "recommenders";
+                recommenderDiv.innerHTML = `<p>"${recommendation}"</p><h4>- ${name}</h4>`;
+                document.querySelector(".recommendations").appendChild(recommenderDiv);
+
+            } else {
+                alert("Please fill out both fields before submitting.");
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 2em;
+    color: black;
+    margin: 0;
+}
+
+h2 {
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 1.5em;
+    color: black;
+    margin: 0;
+}
+
+.navigation {
+    background-color: rgb(147, 213, 157);
+    display: flex;
+    align-items: baseline;
+    padding-left: 2em;
+    padding-top: 2em;
+    
+}
+
+.titlePage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 2em;
+    padding: 1em;
+
+
+}
+
+.recommendations {
+    display: flex;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 1em;
+    justify-content: center;
+    gap: 2em;
+}
+
+#recommenders {
+    padding: 1em;
+    border: 4px solid black;
+    background-color: lightgrey;
+    font-style: italic;
+}
+
+.leave {
+    padding: 2em;
+    text-align: center;
+}
+
+
+
+#leftTitle {
+    height: 150px;
+    width: 150px;
+    font-size: 4em;
+    background-color: red;
+    text-align: center;
+
+}
+
+#rightTitle {
+    padding-left: 5em;
+}
+
+#HTML {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: orange;
+}
+
+#CSS {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#JavaScript {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: yellow;
+}
+
+#Python {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+#Java {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+#C {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(233, 229, 229);
+}
+
+
+
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    column-gap: 2em;
+    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
